@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,IAAI,CAAA;EACA,gBAAgB,EAAG,IAAI;CAE1B",
+    "sources": [
+        "mainStyle.scss",
+        "_body.scss",
+        "_fonts.scss",
+        "_footer.scss",
+        "_header.scss",
+        "_sidebar.scss",
+        "_variables.scss"
+    ],
+    "names": [],
+    "file": "mainStyle.css"
+}
