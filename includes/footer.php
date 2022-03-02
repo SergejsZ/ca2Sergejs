@@ -1,4 +1,4 @@
-<footer class="text-center text-white" style="background-color: #caced1;">
+<!-- <footer class="text-center text-white" style="background-color: #caced1;">
   <!-- Grid container -->
   <div class="container p-4">
     <!-- Section: Images -->
@@ -121,4 +121,4 @@
 </footer>
 </div><!-- close div container -->
 </body>
-</html>
+</html> -->
