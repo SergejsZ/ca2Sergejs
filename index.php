@@ -69,44 +69,70 @@ $statement3->closeCursor();
 
 
 
-<?php foreach ($records as $record) : ?>
-
-  
-
-   <div class="container">
- 
-      
+  <?php foreach ($records as $record) : ?>
 
 
-  
 
-  <tr>
-<td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
-<td><?php echo $record['name']; ?></td>
-<td class="right"><?php echo $record['price']; ?></td>
-<td><form action="delete_record.php" method="post"
-id="delete_record_form">
-<input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Delete">
-</form></td>
-<td><form action="edit_record_form.php" method="post"
-id="delete_record_form">
-<input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Edit">
-</form></td>
-</tr>  
+    <div class="container">
 
 
- <p><a href="add_record_form.php">Add Record</a></p> 
- <p><a href="category_list.php">Manage Categories</a></p>
 
- <?php endforeach; ?> 
-<?php
-include('includes/footer.php');
-?>
+      <table class="table table-hover">
+      <thead>
+      <tbody>
+          <tr>  
+            <th scope="col"><img src="image_uploads/<?php echo $record['image']; ?>" width="400px" height="auto" />
+            </th>
+            <td><?php echo $record['name']; ?></td>
+            <td class="right"><?php echo $record['price']; ?></td>
+            <td>
+              <form action="delete_record.php" method="post" id="delete_record_form">
+                <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
+                <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
+                <input type="submit" value="Delete">
+              </form>
+            </td>
+            <td>
+              <form action="edit_record_form.php" method="post" id="delete_record_form">
+                <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
+                <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
+                <input type="submit" value="Edit">
+              </form>
+            </td>
+          </tr>
+        </tbody>
+  </thead>
+
+      </table>
+
+
+
+      <!-- <img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" />
+  <td><?php echo $record['name']; ?></td>
+  <td class="right"><?php echo $record['price']; ?></td>
+  <td><form action="delete_record.php" method="post"
+  id="delete_record_form">
+  <input type="hidden" name="record_id"
+  value="<?php echo $record['recordID']; ?>">
+  <input type="hidden" name="category_id"
+  value="<?php echo $record['categoryID']; ?>">
+  <input type="submit" value="Delete">
+  </form></td>
+  <td><form action="edit_record_form.php" method="post"
+  id="delete_record_form">
+  <input type="hidden" name="record_id"
+  value="<?php echo $record['recordID']; ?>">
+  <input type="hidden" name="category_id"
+  value="<?php echo $record['categoryID']; ?>">
+  <input type="submit" value="Edit">
+  </form></td> -->
+
+
+
+      <!-- <p><a href="add_record_form.php">Add Record</a></p> 
+ <p><a href="category_list.php">Manage Categories</a></p> -->
+
+    <?php endforeach; ?>
+    <?php
+    include('includes/footer.php');
+    ?>
