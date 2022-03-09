@@ -1,4 +1,18 @@
-body {
+ul {
   background-color: pink;
+}
+
+legend, label {
+  background-color: green;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+.output {
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+  margin: .4rem;
 }
 /*# sourceMappingURL=mainStyle.css.map */

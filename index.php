@@ -49,9 +49,9 @@ $statement3->closeCursor();
   ?>
   <h1>Record List</h1>
 
-  <aside>
-    <!-- display a list of categories -->
-    <h2>Categories</h2>
+  <!-- <aside> -->
+  <!-- display a list of categories -->
+  <!-- <h2>Categories</h2>
     <nav>
       <ul>
         <?php foreach ($categories as $category) : ?>
@@ -62,7 +62,7 @@ $statement3->closeCursor();
         <?php endforeach; ?>
       </ul>
     </nav>
-  </aside>
+  </aside> -->
 
 
   <!-- display a table of records -->
@@ -73,66 +73,85 @@ $statement3->closeCursor();
 
 
 
-    <div class="container">
 
 
 
-      <table class="table table-hover">
-      <thead>
+
+    <table class="table table-hover">
+
       <tbody>
-          <tr>  
-            <th scope="col"><img src="image_uploads/<?php echo $record['image']; ?>" width="400px" height="auto" />
-            </th>
-            <td><?php echo $record['name']; ?></td>
-            <td class="right"><?php echo $record['price']; ?></td>
-            <td>
-              <form action="delete_record.php" method="post" id="delete_record_form">
-                <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
-                <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
-                <input type="submit" value="Delete">
-              </form>
-            </td>
-            <td>
-              <form action="edit_record_form.php" method="post" id="delete_record_form">
-                <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
-                <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
-                <input type="submit" value="Edit">
-              </form>
-            </td>
-          </tr>
-        </tbody>
-  </thead>
-
-      </table>
+        <tr>
+          <td scope="row"><img src="image_uploads/<?php echo $record['image']; ?>" class="rounded" alt="..." width="300px" height="auto " />
+          <td class="align-middle">
 
 
+            <fieldset>
+              <legend>Name</legend>
 
-      <!-- <img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" />
-  <td><?php echo $record['name']; ?></td>
-  <td class="right"><?php echo $record['price']; ?></td>
-  <td><form action="delete_record.php" method="post"
-  id="delete_record_form">
-  <input type="hidden" name="record_id"
-  value="<?php echo $record['recordID']; ?>">
-  <input type="hidden" name="category_id"
-  value="<?php echo $record['categoryID']; ?>">
-  <input type="submit" value="Delete">
-  </form></td>
-  <td><form action="edit_record_form.php" method="post"
-  id="delete_record_form">
-  <input type="hidden" name="record_id"
-  value="<?php echo $record['recordID']; ?>">
-  <input type="hidden" name="category_id"
-  value="<?php echo $record['categoryID']; ?>">
-  <input type="submit" value="Edit">
-  </form></td> -->
+              <label for="kraken"><?php echo $record['name']; ?> </label><br />
+
+
+            </fieldset>
+          </td>
+
+          <!--          
+  <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" value="test@example.com">
+  <label for="floatingInputValue">Input with value</label> -->
+
+          <td class="align-middle">
+            <form class="form-floating">
+              <output class="form-control">
+                <output for="floatingInputValue"><?php echo $record['price']; ?>
+            </form>
+          </td>
 
 
 
-      <!-- <p><a href="add_record_form.php">Add Record</a></p> 
- <p><a href="category_list.php">Manage Categories</a></p> -->
+          <td class="align-middle">
+            <form action="delete_record.php" method="post" id="delete_record_form">
+              <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
+              <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
+              <input class="btn btn-outline-dark" type="submit" value="Delete">
+            </form>
+          </td>
+          <td class="align-middle">
+            <form action="edit_record_form.php" method="post" id="delete_record_form">
+              <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
+              <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
+              <input class="btn btn-outline-dark" type="submit" value="Edit">
+            </form>
+          </td>
+        </tr>
 
-    <?php endforeach; ?>
-    <?php
-    include('includes/footer.php');
-    ?>
+      </tbody>
+    </table>
+
+
+
+    <!-- <img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" />
+      <td><?php echo $record['name']; ?></td>
+      <td class="right"><?php echo $record['price']; ?></td>
+      <td>
+        <form action="delete_record.php" method="post" id="delete_record_form">
+          <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
+          <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
+          <input type="submit" value="Delete">
+        </form>
+      </td>
+      <td>
+        <form action="edit_record_form.php" method="post" id="delete_record_form">
+          <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
+          <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
+          <input type="submit" value="Edit">
+        </form>
+      </td>
+      </tr> -->
+
+    <!-- 
+      <p><a href="add_record_form.php">Add Record</a></p>
+      <p><a href="category_list.php">Manage Categories</a></p> -->
+
+  <?php endforeach; ?>
+  <?php
+  include('includes/footer.php');
+  ?>
