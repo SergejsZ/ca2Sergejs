@@ -1,7 +1,12 @@
 <?php
     $dsn = 'mysql:host=localhost;dbname=ca2_sergejs';
     $username = 'root';
-    $password = 'lJA67xen';
+    $password = '';
+
+
+    // $dsn = 'mysql:host=localhost;dbname=ca2_sergejs';
+    // $username = 'root';
+    // $password = 'lJA67xen';
 
     try {
         $db = new PDO($dsn, $username, $password);
