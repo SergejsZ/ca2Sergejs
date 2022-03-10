@@ -81,7 +81,7 @@ $statement3->closeCursor();
 
       <tbody>
         <tr>
-          <td scope="row"><img src="image_uploads/<?php echo $record['image']; ?>" class="rounded" alt="..." width="300px" height="auto " />
+          <td scope="row"><img src="image_uploads/<?php echo $record['image']; ?>" class="rounded" alt="..." width="250" height="auto " />
           <td class="align-middle">
 
 

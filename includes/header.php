@@ -13,6 +13,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 
+
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php">Phone Shop</a>
@@ -33,7 +34,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
           <?php foreach ($categories as $category) : ?>
-          <li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
+          <li><a class="dropdown-list" href=".?category_id=<?php echo $category['categoryID']; ?>">
               <?php echo $category['categoryName']; ?>
             </a>
           </li>
@@ -44,14 +45,36 @@
         <!-- <li class="nav-item">
           <a class="nav-link disabled">Link</a>
         </li> -->
+
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+      <form class="d-flex" action="" method="post">
+                        <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="search">
+                        <button class="btn btn-outline-success" type="submit" name="submit">Search</button>
+                    </form>
+
+                    <?php
+                    if (isset($_POST['submit'])) {
+                        $searchValue = $_POST['search'];
+                        $con = new mysqli("localhost", "root", "", "ca2_sergejs");
+                        if ($con->connect_error) {
+                            echo "connection Failed: " . $con->connect_error;
+                        } else {
+                            $sql = "SELECT * FROM records WHERE price LIKE '%$searchValue%'";
+
+                            $result = $con->query($sql);
+                            while ($row = $result->fetch_assoc()) {
+                                echo "The product name: " . $row['name'] . '<br>' . "The price: " . $row['price'] . '<br>' . '<br>';
+                            }
+                        }
+                    }
+                    ?>
+    
       </form>
+      
     </div>
   </div>
 </nav>
+
 <body>
 
 
