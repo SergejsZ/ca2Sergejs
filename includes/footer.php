@@ -11,4 +11,11 @@
 </footer>
 </div><!-- close div container -->
 </body>
-</html> -->
+</html> -->         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+          <?php foreach ($categories as $category) : ?>
+          <li><a class="dropdown-list" href=".?category_id=<?php echo $category['categoryID']; ?>">
+              <?php echo $category['categoryName']; ?>
+            </a>
+          </li>
+        <?php endforeach; ?>
+          </ul>
