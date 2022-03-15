@@ -42,15 +42,46 @@
           </ul>
         </li>
 
- 
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled">Link</a>
+        </li> -->
 
       </ul>
-      <form class="d-flex" action="includes\search.php" method="post">
+      <form class="d-flex" action="" method="post">
                         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="search">
                         <button class="btn btn-outline-success" type="submit" name="submit">Search</button>
                     </form>
-                      
 
+                    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+                      
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+  </div>
+</div>
+<div class ="display_search">
+                    <?php
+                    if (isset($_POST['submit'])) {
+                        $searchValue = $_POST['search'];
+                        $con = new mysqli("localhost", "root", "", "ca2_sergejs");
+                        if ($con->connect_error) {
+                            echo "connection Failed: " . $con->connect_error;
+                        } else {
+                            $sql = "SELECT * FROM records WHERE price LIKE '%$searchValue%' OR name LIKE '%$searchValue%'";
+
+                            $result = $con->query($sql);
+                            while ($row = $result->fetch_assoc()) {
+                                echo "The product name: " . $row['name'] . '<br>' . "The price: " . $row['price'] . '<br>' . '<br>';
+                                
+                            }
+                        }
+                    }
+                    ?>
+    
+    </div>
       
     
     </div>

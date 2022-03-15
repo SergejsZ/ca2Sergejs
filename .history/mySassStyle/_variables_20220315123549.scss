@@ -1,13 +1,7 @@
-.fieldset
-{
-    border:2px solid gainsboro ;
-    -moz-border-radius:8px;
-    -webkit-border-radius:8px;	
-    border-radius:8px;	
-    text-align: inherit;
-    text-decoration: none;
-    white-space:inherit;
-
+legend , label {
+    background-color: green;
+    color: #fff;
+    padding: 3px 6px;
 }
 
 .output {

@@ -42,20 +42,19 @@
           </ul>
         </li>
 
- 
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled">Link</a>
+        </li> -->
 
       </ul>
-      <form class="d-flex" action="includes\search.php" method="post">
+      <form class="d-flex" action="" method="post">
                         <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="search">
                         <button class="btn btn-outline-success" type="submit" name="submit">Search</button>
                     </form>
-                      
 
-      
-    
-    </div>
-  </div>
+
 </nav>
+
 
 <body>
 

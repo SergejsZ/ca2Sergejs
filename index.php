@@ -85,24 +85,25 @@ $statement3->closeCursor();
           <td class="align-middle">
 
 
-            <fieldset>
+            <fieldset class = "fieldset">
               <legend>Name</legend>
 
-              <label for="kraken"><?php echo $record['name']; ?> </label><br />
+              <label><?php echo $record['name']; ?> </label><br />
 
 
             </fieldset>
           </td>
 
-          <!--          
-  <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" value="test@example.com">
-  <label for="floatingInputValue">Input with value</label> -->
-
           <td class="align-middle">
-            <form class="form-floating">
-              <output class="form-control">
-                <output for="floatingInputValue"><?php echo $record['price']; ?>
-            </form>
+          <fieldset class = "fieldset">
+              <legend>Price</legend>
+
+              <label><?php echo $record['price']; ?> </label><br />
+
+
+            </fieldset>
+            
+          </td>
           </td>
 
 

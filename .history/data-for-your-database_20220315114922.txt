@@ -69,14 +69,3 @@ ALTER TABLE `records`
 --
 ALTER TABLE `records`
   MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
-
-
---
-ALTER TABLE `categories`
-  MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
---
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`categoryID`);
---

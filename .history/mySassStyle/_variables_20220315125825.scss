@@ -4,10 +4,14 @@
     -moz-border-radius:8px;
     -webkit-border-radius:8px;	
     border-radius:8px;	
+    display: block;
+    padding: 0.25rem 1rem;
+    clear: both;
+    color: #212529;
     text-align: inherit;
     text-decoration: none;
     white-space:inherit;
-
+    border: 2;
 }
 
 .output {
