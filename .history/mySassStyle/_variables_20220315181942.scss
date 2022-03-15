@@ -1,0 +1,236 @@
+.fieldset
+{
+    border:2px solid gainsboro ;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;	
+    border-radius:8px;	
+    text-align: inherit;
+    text-decoration: none;
+    white-space:inherit;
+
+}
+
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+
+.dropdown-list{
+    display: block;
+    padding: 0.25rem 1rem;
+    clear: both;
+    color: #212529;
+    text-align: inherit;
+    text-decoration: none;
+    white-space:inherit;
+    border: 2;
+}
+
+
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+ 
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: rgb(56, 56, 56);
+}
+ 
+label {
+    font-size: 1rem;
+}
+ 
+p {
+    margin-bottom: 30px;
+}
+ 
+a {
+    color: #5c51e0;
+    outline: none;
+    text-decoration: none;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+ 
+a:hover,
+a:focus {
+    color: rgb(140, 134, 212);
+    text-decoration: none;
+    outline: none;
+}
+ 
+ 
+/* Utilities */
+ 
+.row-height {
+    min-height: 100vh !important;
+    height: 100vh;
+}
+ 
+.content-right {
+    overflow-y: auto;
+}
+ 
+.copyright-text {
+    text-align: center;
+}
+ 
+.background-image {
+    background-image: url("https://i.imgur.com/NXz5UXg.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #ededed;
+}
+ 
+.modal-content .close {
+    font-weight: 300;
+    font-size: 32px;
+    font-size: 2rem;
+    outline: none;
+}
+ 
+ 
+/* Forms */
+ 
+.form-control {
+    border: 1px solid #dedede !important;
+    font-size: 0.9rem;
+    height: calc(2.46rem + 2px);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+}
+ 
+.form-control:focus {
+    box-shadow: none;
+    border-color: #434bdf;
+}
+ 
+.form-control::-webkit-input-placeholder,
+.form-control::-moz-placeholder,
+.form-control:-ms-input-placeholder,
+.form-control::-ms-input-placeholder {
+    color: rgb(195, 195, 195);
+    opacity: 1;
+}
+ 
+.form-container .form-control {
+    border: none !important;
+    border-bottom: 1px solid #dedede !important;
+    padding-left: 0;
+    padding-right: 0;
+    height: calc(2.2rem);
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+ 
+.form-container .form-control:focus {
+    box-shadow: none;
+    border-color: #5044ca !important;
+}
+ 
+.form-container .form-group {
+    margin-bottom: 30px;
+}
+ 
+#message {
+    height: 150px;
+}
+ 
+.form-label {
+    font-weight: 600;
+}
+ 
+.form-check-label {
+    margin: 3px 0px 0px 15px;
+}
+ 
+input[type="checkbox"] {
+    cursor: pointer;
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    padding: 10px;
+}
+ 
+.form-check-input:checked {
+    background-color: #5044ca;
+    border-color: #5044ca;
+    outline: none;
+    box-shadow: none;
+}
+ 
+.form-check-input.is-valid:checked,
+.was-validated .form-check-input:valid:checked {
+    background-color: #5044ca;
+    outline: none;
+    box-shadow: none;
+}
+ 
+ 
+/* Buttons */
+ 
+.btn-primary {
+    border: none;
+    color: #fff;
+    background-color: #5c51e0;
+    outline: none;
+}
+ 
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #5044ca;
+    outline: none;
+}
+ 
+button.send {
+    cursor: pointer;
+    font-size: 19px;
+    font-family: "Poppins";
+    overflow: visible;
+    position: relative;
+    padding-right: 30px;
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: #d9d6f9;
+    border: none;
+    border-bottom: 4px solid #5c51e0;
+    color: #5c51e0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+ 
+button.send:hover {
+    background-color: #c2bdf3;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}

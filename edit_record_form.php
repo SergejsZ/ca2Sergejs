@@ -16,6 +16,8 @@ $statement->closeCursor();
 <?php
 include('includes/header.php');
 ?>
+
+
         <h1>Edit Product</h1>
         <form action="edit_record.php" method="post" enctype="multipart/form-data"
               id="add_record_form">

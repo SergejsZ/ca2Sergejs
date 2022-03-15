@@ -1,0 +1,124 @@
+.fieldset
+{
+    border:2px solid gainsboro ;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;	
+    border-radius:8px;	
+    text-align: inherit;
+    text-decoration: none;
+    white-space:inherit;
+
+}
+
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+
+.dropdown-list{
+    display: block;
+    padding: 0.25rem 1rem;
+    clear: both;
+    color: #212529;
+    text-align: inherit;
+    text-decoration: none;
+    white-space:inherit;
+    border: 2;
+}
+
+
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+ 
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: rgb(56, 56, 56);
+}
+ 
+label {
+    font-size: 1rem;
+}
+ 
+p {
+    margin-bottom: 30px;
+}
+ 
+a {
+    color: #5c51e0;
+    outline: none;
+    text-decoration: none;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+ 
+a:hover,
+a:focus {
+    color: rgb(140, 134, 212);
+    text-decoration: none;
+    outline: none;
+}
+ 
+ 
+/* Utilities */
+ 
+.row-height {
+    min-height: 100vh !important;
+    height: 100vh;
+}
+ 
+.content-right {
+    overflow-y: auto;
+}
+ 
+.copyright-text {
+    text-align: center;
+}
+ 
+.background-image {
+    background-image: url("https://i.imgur.com/NXz5UXg.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #ededed;
+}
+ 
+.modal-content .close {
+    font-weight: 300;
+    font-size: 32px;
+    font-size: 2rem;
+    outline: none;
+}
+ 
+ 
+/* Forms */
+ 
+form {
+    border: 1px solid #dedede !important;
+    font-size: 0.9rem;
+    height: calc(2.46rem + 2px);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+}
+ 
+.form-control:focus {
+    box-shadow: none;
+    border-color: #434bdf;
+}

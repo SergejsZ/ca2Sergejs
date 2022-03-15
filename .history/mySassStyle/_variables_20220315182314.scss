@@ -28,3 +28,20 @@ input {
     white-space:inherit;
     border: 2;
 }
+
+
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+ 
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: rgb(56, 56, 56);
+}
+ 

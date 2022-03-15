@@ -18,7 +18,7 @@ $statement->closeCursor();
      id="add_record_form">
 
         <label>Category:</label>
-        <select name="category_id">
+        <select  class="form-select" aria-label="Default select example"  name="category_id">
             <?php foreach ($categories as $category) : ?>
                 <option value="<?php echo $category['categoryID']; ?>">
                     <?php echo $category['categoryName']; ?>
@@ -26,22 +26,26 @@ $statement->closeCursor();
             <?php endforeach; ?>
         </select>
         <br>
-        <label>Name:</label>
-        <input type="input" name="name" required>
+        <label for="exampleInputEmail2" class="form-label">Name:</label>
+        <input class="form-control" type="input" name="name" required>
+        <div class="form-text">Enter name of the Phone you would like to add.</div>
         <br>
 
         <label>List Price:</label>
-        <input type="input" name="price" required>
+        <input  class="form-control" type="input" name="price" required>
+        <div class="form-text">Enter price of the Phone.</div>
         <br>
 
         <label>Image:</label>
-        <input type="file" name="image" accept="image/*" />
+        <input class="form-control" type="file" name="image" accept="image/*" />
         <br>
 
         <label>&nbsp;</label>
         <input type="submit" value="Add Record">
         <br>
     </form>
+
+
     <!-- <p><a href="index.php">View Homepage</a></p> -->
     <?php
     include('includes/footer.php');
