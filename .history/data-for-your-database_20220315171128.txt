@@ -1,0 +1,83 @@
+
+--
+-- Table structure for table `categories`
+--
+
+CREATE TABLE `categories` (
+  `categoryID` int(11) NOT NULL,
+  `categoryName` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
+(1, 'iPhones'),
+(2, 'Samsungs'),
+(3, 'Xiaomi'),
+(4, 'Nokia'),
+(5, 'Huawei'),
+(5, 'Google'),
+(7, 'Motorola');
+
+--
+-- Table structure for table `records`
+--
+
+CREATE TABLE `records` (
+  `recordID` int(11) NOT NULL,
+  `categoryID` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `records`
+--
+
+INSERT INTO `records` (`recordID`, `categoryID`, `name`, `price`, `image`) VALUES
+(1, 1 , 'iPhone 9', '12.00', 'iPhoneBroken.jpg'),
+(2, 1, 'Original iPhone', '15.00', 'iPhoneO.jpg'),
+(3, 1, 'iPhone 7', '18.00', 'iPhone7.jpg'),
+(4, 1, 'Another iPhone 7', '10.00', 'iPhone7.jpg'),
+(5, 2, 'Samsung s21fe', '16.00', 's21fe.jpg'),
+(6, 2, 'Samsung A53', '19.00', 'samsungA53.jpg'),
+(7, 2, 'Samsung Galaxy s9', '12.00', 'samsungS91234.jpg'),
+(8, 3, 'Xiaomi Mi10Pro', '10.00', 'Mi10tPro.jpg'),
+(9, 4, 'Nokia 3310', '15.00', 'Nokia3310.jpg'),
+(10, 5, 'Huawei 30p', '13.00', 'black30pro.jpg'),
+(11, 5, 'Huawei 30p', '17.00', 'black30pro.jpg'),
+(12, 6, 'Motorola G71', '19.00', 'G71Moto.jpg');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `records`
+--
+ALTER TABLE `records`
+  ADD PRIMARY KEY (`recordID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `records`
+--
+ALTER TABLE `records`
+  MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+
+
+--
+ALTER TABLE `categories`
+  MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`categoryID`);
+--
