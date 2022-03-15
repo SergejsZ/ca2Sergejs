@@ -45,8 +45,8 @@
  
 
       </ul>
-      <form class="d-flex" action="search.php" method="post" >
-                        <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="search">
+      <form class="d-flex" action="includes\search.php" method="post" >
+                        <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search" name="search" required>
                         <button class="btn btn-outline-success" type="submit" name="submit" >Search</button>
                     </form>
                       
