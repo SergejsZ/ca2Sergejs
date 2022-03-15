@@ -49,26 +49,6 @@ $statement3->closeCursor();
   ?>
   <h1>Record List</h1>
 
-  <!-- <aside> -->
-  <!-- display a list of categories -->
-  <!-- <h2>Categories</h2>
-    <nav>
-      <ul>
-        <?php foreach ($categories as $category) : ?>
-          <li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
-              <?php echo $category['categoryName']; ?>
-            </a>
-          </li>
-        <?php endforeach; ?>
-      </ul>
-    </nav>
-  </aside> -->
-
-
-  <!-- display a table of records -->
-
-
-
   <?php foreach ($records as $record) : ?>
 
 
@@ -85,28 +65,23 @@ $statement3->closeCursor();
           <td class="align-middle">
 
 
-            <fieldset class = "fieldset">
+            <fieldset class="fieldset">
               <legend>Name</legend>
-
               <label><?php echo $record['name']; ?> </label><br />
-
-
             </fieldset>
           </td>
 
           <td class="align-middle">
-          <fieldset class = "fieldset">
+            <fieldset class="fieldset">
               <legend>Price</legend>
 
               <label><?php echo $record['price']; ?> </label><br />
 
 
             </fieldset>
-            
+
           </td>
           </td>
-
-
 
           <td class="align-middle">
             <form action="delete_record.php" method="post" id="delete_record_form">
@@ -126,32 +101,6 @@ $statement3->closeCursor();
 
       </tbody>
     </table>
-
-
-
-    <!-- <img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" />
-      <td><?php echo $record['name']; ?></td>
-      <td class="right"><?php echo $record['price']; ?></td>
-      <td>
-        <form action="delete_record.php" method="post" id="delete_record_form">
-          <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
-          <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
-          <input type="submit" value="Delete">
-        </form>
-      </td>
-      <td>
-        <form action="edit_record_form.php" method="post" id="delete_record_form">
-          <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
-          <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
-          <input type="submit" value="Edit">
-        </form>
-      </td>
-      </tr> -->
-
-    <!-- 
-      <p><a href="add_record_form.php">Add Record</a></p>
-      <p><a href="category_list.php">Manage Categories</a></p> -->
-
   <?php endforeach; ?>
   <?php
   include('includes/footer.php');

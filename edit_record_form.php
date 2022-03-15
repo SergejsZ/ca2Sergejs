@@ -26,22 +26,22 @@ include('includes/header.php');
                    value="<?php echo $records['recordID']; ?>">
 
             <label>Category ID:</label>
-            <input type="category_id" name="category_id"
+            <input class="form-control" type="category_id" name="category_id"
                    value="<?php echo $records['categoryID']; ?>"required>
             <br>
 
             <label>Name:</label>
-            <input type="input" name="name"
+            <input class="form-control" type="input" name="name"
                    value="<?php echo $records['name']; ?>"required>
             <br>
 
             <label>List Price:</label>
-            <input type="input" name="price"
+            <input class="form-control" type="input" name="price"
                    value="<?php echo $records['price']; ?>"required>
             <br>
 
             <label>Image:</label>
-            <input type="file" name="image" accept="image/*" />
+            <input class="form-control" type="file" name="image" accept="image/*" />
             <br>            
             <?php if ($records['image'] != "") { ?>
             <p><img src="image_uploads/<?php echo $records['image']; ?>" height="150" /></p>
@@ -51,7 +51,6 @@ include('includes/header.php');
             <input type="submit" value="Save Changes">
             <br>
         </form>
-        <p><a href="index.php">View Homepage</a></p>
     <?php
 include('includes/footer.php');
 ?>

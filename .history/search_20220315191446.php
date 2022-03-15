@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
 
         $result = $con->query($sql);
         if (mysqli_num_rows($result) > 0) {
-            echo "<table class='table '>";
+            echo "<table class='table table'>";
             echo "<tr>";
             echo "<th>image</th>";
             echo "<th>name</th>";
