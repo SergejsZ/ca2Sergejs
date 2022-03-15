@@ -20,4 +20,3 @@ if ($name == null) {
     // Display the Category List page
     include('category_list.php');
 }
-?>

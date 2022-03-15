@@ -24,7 +24,7 @@ include('includes/header.php');
         <tr>
             <td><?php echo $category['categoryName']; ?></td>
             <td>
-                <form action="delete_category.php" method="post"
+                <form class "listcategory" action="delete_category.php" method="post"
                       id="delete_product_form">
                     <input type="hidden" name="category_id"
                            value="<?php echo $category['categoryID']; ?>">
@@ -39,13 +39,12 @@ include('includes/header.php');
     <h2>Add Category</h2>
     <form action="add_category.php" method="post"
           id="add_category_form">
-
         <label>Name:</label>
-        <input type="input" name="name" required>
+        <input class="form-control" type="input" name="name" required>
+        <div class="form-text">Enter name of the Category you would like to add.</div>
         <input id="add_category_button" type="submit" value="Add" required >
     </form>
     <br>
-    <p><a href="index.php">Homepage</a></p>
 
     <?php
 include('includes/footer.php');
