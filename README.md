@@ -9,3 +9,7 @@
 ## Result
 * Open this link to see the website
 * https://mysql05.comp.dkit.ie/D00235504/ca2Sergejs/index.php
+ # How the application should look :
+ ![image](https://user-images.githubusercontent.com/94534715/158634685-0628ccad-ef48-41ce-b82a-292ad521ab59.png)
+
+
